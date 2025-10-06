@@ -1,5 +1,5 @@
 openai
 streamlit
-bs4
+beautifulsoup4
 sklearn
 numpy
