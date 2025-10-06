@@ -1,5 +1,6 @@
-openai
 streamlit
+openai
+requests
 beautifulsoup4
-sklearn
+scikit-learn
 numpy
