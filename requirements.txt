@@ -1,2 +1,5 @@
 openai
 streamlit
+bs4
+sklearn
+numpy
