@@ -10,8 +10,8 @@ import numpy as np
 client = OpenAI()
 
 @st.cache_data
-def scrape_printerpix_data():
-    url = "https://www.printerpix.co.uk/"
+def scrape_website_data():
+    url = "https://al-sadhan.com/"
     response = requests.get(url)
     soup = BeautifulSoup(response.text, "html.parser")
     
@@ -47,10 +47,10 @@ def generate_response(user_query, context):
     return response.choices[0].message.content
 
 def main():
-    st.title("Printerpix Arabic Chatbot")
-    st.write("اسأل أي سؤال عن Printerpix وسأجيبك بدقة باستخدام بيانات الموقع.")
+    st.title("Arabic AI Assistant")
+    st.write("مرحباً! أنا مساعدك الذكي، اسألني أي شيء ترغب بمعرفته.")
 
-    texts = scrape_printerpix_data()
+    texts = scrape_website_data()
     vectorizer, tfidf_matrix = prepare_vectorizer(texts)
 
     user_query = st.text_input("اكتب سؤالك هنا:")
